@@ -344,3 +344,24 @@ span.todo-trash {
       height: 100%;
    }
 }
+
+
+.language-btn {
+   text-align: end;
+   font-size: 8px;
+   line-height: 10px;
+   font-weight: 700;
+   
+}
+.language-btn  a{
+   display: inline-block;
+   min-height: 10px;
+   border-radius: 5px;
+   padding: 2px 3px;
+   border: 1px solid #ffffff;
+   opacity: 0.8;
+   cursor: pointer;
+   color: #ffffff;
+   text-transform: uppercase;
+   text-decoration: none;
+}
