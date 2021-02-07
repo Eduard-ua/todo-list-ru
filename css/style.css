@@ -1,45 +1,26 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
    margin: 0 auto;
    font-family: "Verdana", "Tahoma", sans-serif;
    font-size: 14px;
    line-height: 20px;
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
 
    max-width: 580px;
-   */ margin: 0 auto;
    padding-bottom: 10px;
    border-radius: 10px;
-   box-shadow: 5px 0px 5px #5c8bf0,
+   -webkit-box-shadow: 5px 0px 5px #5c8bf0,
+      -5px 0px 5px #5c8bf0;
+           box-shadow: 5px 0px 5px #5c8bf0,
       -5px 0px 5px #5c8bf0;
 }
-
-
-/*
-@media (min-width: 551px) {
-  body {
-    background-color: #f6f8fe;
-  max-width: 580px;
-  }  
-}
-*/
-
-@media screen and (max-height: 450px) {
-   .overlay a {
-      font-size: 20px
-   }
-
-   .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-   }
-
-   #todo {
-      width: 100%;
-      height: 100%;
-   }
-}
-
 
 .main-header {
    padding: 20px 16px 22px;
@@ -59,28 +40,30 @@ body {
 }
 
 .main-header__filter {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: center;
-   align-items: flex-end;
-
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: end;
+       -ms-flex-align: end;
+           align-items: flex-end;
 }
 
 .main-header__filter label {
-   /* border: 1px solid red; */
    min-height: 50px;
    margin-right: 5px;
    margin-left: 5px;
    font-weight: 700;
    width: 150px;
-
-
-   /*display: inline-block;*/
 }
 
 .main-header__filter input,
 .main-header__filter select {
    width: 100%;
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
    height: 30px;
    color: #5c8bf0;
    font-weight: 700;
@@ -134,6 +117,8 @@ span.todo-trash {
    width: 0;
    opacity: 0;
    -webkit-transition: 0.3s;
+   -webkit-transition: 0.3s linear;
+   -o-transition: 0.3s linear;
    transition: 0.3s linear;
 }
 
@@ -154,52 +139,15 @@ span.todo-trash {
    margin-top: 5px;
 }
 
-.fa-active .fa-angle-down-left {
-   transform: rotate(540deg);
-   transition: 0.7s;
-}
-
-.fa-active .fa-angle-down-right {
-   transform: rotate(-540deg);
-   transition: 0.7s;
-}
-
-.fa-active .fa-angle-double-down {
-   transform: rotateX(180deg);
-   transition: 0.7s;
-}
-
-/* .fa-unactive .fa-angle-down-left {
-  transform: rotate(-540deg);
-  transition: 0.7s;
-}
-
-.fa-unactive .fa-angle-down-right {
-  transform: rotate(540deg);
-  transition: 0.7s;
-}
-
-.fa-unactive .fa-angle-double-down{
-  transform: rotateX(-180deg);
-  transition: 0.7s;
-} */
-
-.todo-list .is-important {
-   font-weight: bold;
-   color: #ffffff;
-   background-color: #f98f2d;
-}
-
-.todo-list .is-important::before {
-   border: none;
-   color: #f98f2d;
-   background-color: #ffffff;
-}
-
 .todo-form {
    padding: 0 16px;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
 }
 
 .input-label {
@@ -230,23 +178,23 @@ span.todo-trash {
    border-radius: 4px;
 }
 
-.todo-btn {
-   margin: 5px;
-   padding: 12px 22px;
-   box-sizing: border-box;
-   min-width: 145px;
-   color: #ffffff;
-   font-weight: 700;
-   background-color: #5c8bf0;
-   cursor: pointer;
-}
-
 .todo-input:focus,
 .todo-form button:focus {
    outline: 3px solid #bac9f7;
    outline-offset: 0;
 }
 
+.todo-btn {
+   margin: 5px;
+   padding: 12px 22px;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   min-width: 145px;
+   color: #ffffff;
+   font-weight: 700;
+   background-color: #5c8bf0;
+   cursor: pointer;
+}
 .todo-btn:hover {
    background-color: #447aee;
 }
@@ -275,7 +223,8 @@ span.todo-trash {
    line-height: 10px;
    border: 2px solid #86a8e7;
    background-color: transparent;
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
    border-radius: 50%;
 }
 
@@ -303,9 +252,9 @@ span.todo-trash {
    background-color: rgb(0, 0, 0);
    background-color: rgba(0, 0, 0, 0.8);
    overflow-x: hidden;
+   -o-transition: 0.5s;
    transition: 0.5s;
    -webkit-transition: 0.5s;
-   
 }
 
 #overlay .closeTips {
@@ -374,5 +323,24 @@ span.todo-trash {
       top: 15px;
       right: 40px;
       font-size: 40px;
+   }
+   
+   
+}
+
+@media screen and (max-height: 450px) {
+   .overlay a {
+      font-size: 20px
+   }
+
+   .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+   }
+
+   #todo {
+      width: 100%;
+      height: 100%;
    }
 }
