@@ -341,13 +341,16 @@ span.todo-trash {
 
    .main-header__filter label {
       width: 100px;
-
    }
 
    .main-header__filter input,
    .main-header__filter select {
       font-size: 8px;
       line-height: 10px;
+   }
+   .todo-btn {
+      font-size: 12px;
+      min-width: 95px;
    }
 
    .tips {
@@ -372,5 +375,4 @@ span.todo-trash {
       right: 40px;
       font-size: 40px;
    }
-   
 }
